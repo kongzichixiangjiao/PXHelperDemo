@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CA435438A4E211D1EC8C26 /* libPods-PXHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */; };
+		DC226FC0205A707E0046BA08 /* YYDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FBF205A707E0046BA08 /* YYDownloadModel.m */; };
+		DC4D668F2058CCF300C3C257 /* YYDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */; };
+		DC4D66932058FFD800C3C257 /* PXMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4D66912058FFD800C3C257 /* PXMainTableViewCell.m */; };
+		DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */; };
 		DC638AAD2057B21300846CEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AAC2057B21300846CEF /* AppDelegate.m */; };
-		DC638AB02057B21300846CEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AAF2057B21300846CEF /* ViewController.m */; };
 		DC638AB32057B21300846CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC638AB12057B21300846CEF /* Main.storyboard */; };
 		DC638AB52057B21300846CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC638AB42057B21300846CEF /* Assets.xcassets */; };
 		DC638AB82057B21300846CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC638AB62057B21300846CEF /* LaunchScreen.storyboard */; };
 		DC638ABB2057B21300846CEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638ABA2057B21300846CEF /* main.m */; };
 		DC638AC52057B21300846CEF /* PXHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AC42057B21300846CEF /* PXHelperDemoTests.m */; };
 		DC638AD02057B21300846CEF /* PXHelperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638ACF2057B21300846CEF /* PXHelperDemoUITests.m */; };
+		DC638AE52057B32300846CEF /* PXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AE42057B32300846CEF /* PXHomeViewController.m */; };
+		DC638AF52057B37E00846CEF /* PXMainSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AEE2057B37E00846CEF /* PXMainSplitViewController.m */; };
+		DC638AF62057B37E00846CEF /* PXMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AF02057B37E00846CEF /* PXMainTableViewController.m */; };
+		DC638AF72057B37E00846CEF /* PXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AF22057B37E00846CEF /* PXMainViewController.m */; };
+		DC638AF82057B37E00846CEF /* PXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AF42057B37E00846CEF /* PXNavigationViewController.m */; };
+		DC638B032057B7E400846CEF /* AppDelegate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B022057B7E400846CEF /* AppDelegate+Category.m */; };
+		DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B0A2057BA4100846CEF /* PXDBModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +46,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46544029889E7E3089C90FB0 /* Pods-PXHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
+		56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXHelperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62705108B9114CA85A66DF05 /* Pods-PXHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DC226FBE205A707E0046BA08 /* YYDownloadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDownloadModel.h; sourceTree = "<group>"; };
+		DC226FBF205A707E0046BA08 /* YYDownloadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDownloadModel.m; sourceTree = "<group>"; };
+		DC4D668D2058CCF300C3C257 /* YYDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDownloadManager.h; sourceTree = "<group>"; };
+		DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDownloadManager.m; sourceTree = "<group>"; };
+		DC4D66902058FFD800C3C257 /* PXMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXMainTableViewCell.h; sourceTree = "<group>"; };
+		DC4D66912058FFD800C3C257 /* PXMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXMainTableViewCell.m; sourceTree = "<group>"; };
+		DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXMainTableViewCell.xib; sourceTree = "<group>"; };
 		DC638AA82057B21300846CEF /* PXHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC638AAB2057B21300846CEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC638AAC2057B21300846CEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DC638AAE2057B21300846CEF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DC638AAF2057B21300846CEF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DC638AB22057B21300846CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC638AB42057B21300846CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC638AB72057B21300846CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +70,21 @@
 		DC638ACB2057B21300846CEF /* PXHelperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PXHelperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC638ACF2057B21300846CEF /* PXHelperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXHelperDemoUITests.m; sourceTree = "<group>"; };
 		DC638AD12057B21300846CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC638AE32057B32300846CEF /* PXHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXHomeViewController.h; sourceTree = "<group>"; };
+		DC638AE42057B32300846CEF /* PXHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXHomeViewController.m; sourceTree = "<group>"; };
+		DC638AED2057B37E00846CEF /* PXMainSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMainSplitViewController.h; sourceTree = "<group>"; };
+		DC638AEE2057B37E00846CEF /* PXMainSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMainSplitViewController.m; sourceTree = "<group>"; };
+		DC638AEF2057B37E00846CEF /* PXMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMainTableViewController.h; sourceTree = "<group>"; };
+		DC638AF02057B37E00846CEF /* PXMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMainTableViewController.m; sourceTree = "<group>"; };
+		DC638AF12057B37E00846CEF /* PXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMainViewController.h; sourceTree = "<group>"; };
+		DC638AF22057B37E00846CEF /* PXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMainViewController.m; sourceTree = "<group>"; };
+		DC638AF32057B37E00846CEF /* PXNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNavigationViewController.h; sourceTree = "<group>"; };
+		DC638AF42057B37E00846CEF /* PXNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNavigationViewController.m; sourceTree = "<group>"; };
+		DC638B012057B7E400846CEF /* AppDelegate+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Category.h"; sourceTree = "<group>"; };
+		DC638B022057B7E400846CEF /* AppDelegate+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Category.m"; sourceTree = "<group>"; };
+		DC638B082057B8AC00846CEF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DC638B092057BA4100846CEF /* PXDBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXDBModel.h; sourceTree = "<group>"; };
+		DC638B0A2057BA4100846CEF /* PXDBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXDBModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CA435438A4E211D1EC8C26 /* libPods-PXHelperDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		709B74CE73EFE3B1551CFD18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62705108B9114CA85A66DF05 /* Pods-PXHelperDemo.debug.xcconfig */,
+				46544029889E7E3089C90FB0 /* Pods-PXHelperDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		970541598A3AC47A0F697B6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC638A9F2057B21200846CEF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +137,8 @@
 				DC638AC32057B21300846CEF /* PXHelperDemoTests */,
 				DC638ACE2057B21300846CEF /* PXHelperDemoUITests */,
 				DC638AA92057B21300846CEF /* Products */,
+				709B74CE73EFE3B1551CFD18 /* Pods */,
+				970541598A3AC47A0F697B6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +155,17 @@
 		DC638AAA2057B21300846CEF /* PXHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DC638B042057B87500846CEF /* Tools */,
+				DC638AEC2057B37E00846CEF /* Main */,
 				DC638AAB2057B21300846CEF /* AppDelegate.h */,
 				DC638AAC2057B21300846CEF /* AppDelegate.m */,
-				DC638AAE2057B21300846CEF /* ViewController.h */,
-				DC638AAF2057B21300846CEF /* ViewController.m */,
+				DC638B012057B7E400846CEF /* AppDelegate+Category.h */,
+				DC638B022057B7E400846CEF /* AppDelegate+Category.m */,
+				DC638B092057BA4100846CEF /* PXDBModel.h */,
+				DC638B0A2057BA4100846CEF /* PXDBModel.m */,
+				DC638AE32057B32300846CEF /* PXHomeViewController.h */,
+				DC638AE42057B32300846CEF /* PXHomeViewController.m */,
+				DC638B082057B8AC00846CEF /* PrefixHeader.pch */,
 				DC638AB12057B21300846CEF /* Main.storyboard */,
 				DC638AB42057B21300846CEF /* Assets.xcassets */,
 				DC638AB62057B21300846CEF /* LaunchScreen.storyboard */,
@@ -132,6 +193,35 @@
 			path = PXHelperDemoUITests;
 			sourceTree = "<group>";
 		};
+		DC638AEC2057B37E00846CEF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC638AED2057B37E00846CEF /* PXMainSplitViewController.h */,
+				DC638AEE2057B37E00846CEF /* PXMainSplitViewController.m */,
+				DC638AEF2057B37E00846CEF /* PXMainTableViewController.h */,
+				DC638AF02057B37E00846CEF /* PXMainTableViewController.m */,
+				DC4D66902058FFD800C3C257 /* PXMainTableViewCell.h */,
+				DC4D66912058FFD800C3C257 /* PXMainTableViewCell.m */,
+				DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */,
+				DC638AF12057B37E00846CEF /* PXMainViewController.h */,
+				DC638AF22057B37E00846CEF /* PXMainViewController.m */,
+				DC638AF32057B37E00846CEF /* PXNavigationViewController.h */,
+				DC638AF42057B37E00846CEF /* PXNavigationViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DC638B042057B87500846CEF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DC4D668D2058CCF300C3C257 /* YYDownloadManager.h */,
+				DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */,
+				DC226FBE205A707E0046BA08 /* YYDownloadModel.h */,
+				DC226FBF205A707E0046BA08 /* YYDownloadModel.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC638AD42057B21300846CEF /* Build configuration list for PBXNativeTarget "PXHelperDemo" */;
 			buildPhases = (
+				F3DF644A540D6F1D75B5ABB4 /* [CP] Check Pods Manifest.lock */,
 				DC638AA42057B21300846CEF /* Sources */,
 				DC638AA52057B21300846CEF /* Frameworks */,
 				DC638AA62057B21300846CEF /* Resources */,
+				376761B4A2616A6415918535 /* [CP] Embed Pods Frameworks */,
+				1E62113C16C2334CEB4DC9E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */,
 				DC638AB82057B21300846CEF /* LaunchScreen.storyboard in Resources */,
 				DC638AB52057B21300846CEF /* Assets.xcassets in Resources */,
 				DC638AB32057B21300846CEF /* Main.storyboard in Resources */,
@@ -260,14 +354,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E62113C16C2334CEB4DC9E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376761B4A2616A6415918535 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3DF644A540D6F1D75B5ABB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PXHelperDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC638AA42057B21300846CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC638AB02057B21300846CEF /* ViewController.m in Sources */,
 				DC638ABB2057B21300846CEF /* main.m in Sources */,
+				DC638AE52057B32300846CEF /* PXHomeViewController.m in Sources */,
+				DC4D66932058FFD800C3C257 /* PXMainTableViewCell.m in Sources */,
+				DC226FC0205A707E0046BA08 /* YYDownloadModel.m in Sources */,
+				DC4D668F2058CCF300C3C257 /* YYDownloadManager.m in Sources */,
+				DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */,
+				DC638AF62057B37E00846CEF /* PXMainTableViewController.m in Sources */,
+				DC638AF52057B37E00846CEF /* PXMainSplitViewController.m in Sources */,
+				DC638AF82057B37E00846CEF /* PXNavigationViewController.m in Sources */,
 				DC638AAD2057B21300846CEF /* AppDelegate.m in Sources */,
+				DC638B032057B7E400846CEF /* AppDelegate+Category.m in Sources */,
+				DC638AF72057B37E00846CEF /* PXMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -428,11 +587,13 @@
 		};
 		DC638AD52057B21300846CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62705108B9114CA85A66DF05 /* Pods-PXHelperDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGA4995V4J;
 				INFOPLIST_FILE = PXHelperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JN.PuXin.PXHelperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,11 +603,13 @@
 		};
 		DC638AD62057B21300846CEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46544029889E7E3089C90FB0 /* Pods-PXHelperDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGA4995V4J;
 				INFOPLIST_FILE = PXHelperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JN.PuXin.PXHelperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
