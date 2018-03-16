@@ -33,12 +33,12 @@
     NSString* fullPath =
     [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
      stringByAppendingPathComponent:@"minion_01.mp4"];
-     NSString *path = [[NSBundle mainBundle] pathForResource:@"minion_01" ofType:@"mp4"];
+     NSString *path = [[NSBundle mainBundle] pathForResource:@"minion_01.mp4" ofType:nil];
     NSLog(@"%@", fullPath);
     NSLog(@"%@", path);
     NSURL *url1 = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
     
-    NSURL *url = [NSURL URLWithString:path];
+    NSURL *url = [NSURL fileURLWithPath:fullPath];
     NSLog(@"%@", url);
     
     self.player = [[AVPlayer alloc] initWithURL:url];
