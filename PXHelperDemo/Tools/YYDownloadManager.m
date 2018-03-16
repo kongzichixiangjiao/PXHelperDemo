@@ -184,7 +184,7 @@
 // 写入数据到本地的时候会调用的方法
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
     YYDownloadModel *model = [self getCurrentModelWithTask:downloadTask];
-    NSLog(@"fileName == %@", model.fileName);
+//    NSLog(@"fileName == %@", model.fileName);
     NSString* fullPath =
     [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
      stringByAppendingPathComponent:model.fileName];
@@ -192,6 +192,7 @@
     [[NSFileManager defaultManager] moveItemAtURL:location
                                             toURL:[NSURL fileURLWithPath:fullPath]
                                             error:nil];
+    model.filePath = fullPath;
 }
 
 - (void)URLSession:(NSURLSession *)session
@@ -208,7 +209,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     model.progress = progress*100;
     model.state = YYDownloadStateIng;
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"fileName == %@", model.fileName);
+//        NSLog(@"fileName == %@", model.fileName);
         [self.delegate downloadingWithModel:model];
     });
 }

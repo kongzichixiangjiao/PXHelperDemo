@@ -26,6 +26,10 @@
 		DC638AF82057B37E00846CEF /* PXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AF42057B37E00846CEF /* PXNavigationViewController.m */; };
 		DC638B032057B7E400846CEF /* AppDelegate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B022057B7E400846CEF /* AppDelegate+Category.m */; };
 		DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B0A2057BA4100846CEF /* PXDBModel.m */; };
+		DCFF0CE9205B5AFD00A60796 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */; };
+		DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DCFF0CEA205B619F00A60796 /* minion_01.mp4 */; };
+		DCFF0CEE205B63D400A60796 /* PXPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */; };
+		DCFF0D35205B690500A60796 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF0D34205B690500A60796 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,11 @@
 		DC638B082057B8AC00846CEF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DC638B092057BA4100846CEF /* PXDBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXDBModel.h; sourceTree = "<group>"; };
 		DC638B0A2057BA4100846CEF /* PXDBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXDBModel.m; sourceTree = "<group>"; };
+		DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCFF0CEA205B619F00A60796 /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
+		DCFF0CEC205B63D400A60796 /* PXPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXPlayerViewController.h; sourceTree = "<group>"; };
+		DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXPlayerViewController.m; sourceTree = "<group>"; };
+		DCFF0D34205B690500A60796 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFF0D35205B690500A60796 /* AVKit.framework in Frameworks */,
+				DCFF0CE9205B5AFD00A60796 /* AVFoundation.framework in Frameworks */,
 				01CA435438A4E211D1EC8C26 /* libPods-PXHelperDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +136,8 @@
 		970541598A3AC47A0F697B6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCFF0D34205B690500A60796 /* AVKit.framework */,
+				DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */,
 				56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */,
 			);
 			name = Frameworks;
@@ -155,6 +168,7 @@
 		DC638AAA2057B21300846CEF /* PXHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DCFF0CEA205B619F00A60796 /* minion_01.mp4 */,
 				DC638B042057B87500846CEF /* Tools */,
 				DC638AEC2057B37E00846CEF /* Main */,
 				DC638AAB2057B21300846CEF /* AppDelegate.h */,
@@ -205,6 +219,8 @@
 				DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */,
 				DC638AF12057B37E00846CEF /* PXMainViewController.h */,
 				DC638AF22057B37E00846CEF /* PXMainViewController.m */,
+				DCFF0CEC205B63D400A60796 /* PXPlayerViewController.h */,
+				DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */,
 				DC638AF32057B37E00846CEF /* PXNavigationViewController.h */,
 				DC638AF42057B37E00846CEF /* PXNavigationViewController.m */,
 			);
@@ -333,6 +349,7 @@
 			files = (
 				DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */,
 				DC638AB82057B21300846CEF /* LaunchScreen.storyboard in Resources */,
+				DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */,
 				DC638AB52057B21300846CEF /* Assets.xcassets in Resources */,
 				DC638AB32057B21300846CEF /* Main.storyboard in Resources */,
 			);
@@ -418,6 +435,7 @@
 				DC638ABB2057B21300846CEF /* main.m in Sources */,
 				DC638AE52057B32300846CEF /* PXHomeViewController.m in Sources */,
 				DC4D66932058FFD800C3C257 /* PXMainTableViewCell.m in Sources */,
+				DCFF0CEE205B63D400A60796 /* PXPlayerViewController.m in Sources */,
 				DC226FC0205A707E0046BA08 /* YYDownloadModel.m in Sources */,
 				DC4D668F2058CCF300C3C257 /* YYDownloadManager.m in Sources */,
 				DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */,

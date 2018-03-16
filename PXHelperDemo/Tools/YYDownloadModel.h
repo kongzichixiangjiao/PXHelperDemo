@@ -23,6 +23,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong)NSURLSessionDownloadTask *task;
 @property(nonatomic, strong)NSData *resumeData;
 @property(nonatomic, strong)NSString *fileName;
+@property(nonatomic, strong)NSString *filePath;
 @property(nonatomic, strong)NSString *downloadUrl;
 @property(nonatomic, strong)NSString *iD;
 @property(nonatomic, assign)NSInteger totalLength;
