@@ -27,10 +27,6 @@
         model.fileName = [NSString stringWithFormat:@"minion_0%d.mp4", i];
         model.downloadUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4", i];;
         model.taskDescription = [NSString stringWithFormat:@"minion_0%d.mp4", i];
-        model.iD = [NSString stringWithFormat:@"%d", i];
-        model.isPause = false;
-        model.isFinished = false;
-        model.totalLength = 13;
         [self.dataSource addObject:model];
 //        [YYDownloadModel saveItem:model];
     }
@@ -65,7 +61,6 @@
     YYDownloadModel *model = self.dataSource[indexPath.row];
     model.row = indexPath.row;
     cell.model = model;
-    cell.progressLabel.text = [NSString stringWithFormat:@"%f", model.progress];
     return cell;
 }
 
@@ -102,8 +97,17 @@
 - (void)downloadWithResumeData: (NSData *)data {
     
 }
+
 - (void)downloadingWithModel: (YYDownloadModel *)model {
-    self.dataSource[model.row] = model;
+    for (PXMainTableViewCell *cell in self.tableView.visibleCells) {
+        if (cell.model.taskDescription == model.taskDescription) {
+            [cell setup:model];
+        }
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 

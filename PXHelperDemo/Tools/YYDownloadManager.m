@@ -172,7 +172,7 @@
 }
 
 - (YYDownloadModel *)getCurrentModelWithTask: (NSURLSessionDownloadTask *)task {
-    NSLog(@"%@", task.taskDescription);
+//    NSLog(@"%@", task.taskDescription);
     for (YYDownloadModel *model in _ingArray) {
         if (model.taskDescription == task.taskDescription) {
             return model;
@@ -205,13 +205,15 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     model.downloadEdLength = totalBytesWritten;
     // 下载进度
     CGFloat progress = 1.0 * totalBytesWritten / totalBytesExpectedToWrite;
-    NSLog(@"%.f%%",progress*100);
-    model.progress = progress*100;
+    
     model.state = YYDownloadStateIng;
-    dispatch_async(dispatch_get_main_queue(), ^{
-//        NSLog(@"fileName == %@", model.fileName);
-        [self.delegate downloadingWithModel:model];
-    });
+    if (model.progress != progress*100)  {
+        NSLog(@"%.f%%",progress*100);
+        model.progress = progress*100;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate downloadingWithModel:model];
+        });
+    }
 }
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes {

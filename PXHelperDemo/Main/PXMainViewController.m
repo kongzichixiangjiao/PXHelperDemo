@@ -33,11 +33,6 @@
     NSString* fullPath =
     [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
      stringByAppendingPathComponent:@"minion_01.mp4"];
-     NSString *path = [[NSBundle mainBundle] pathForResource:@"minion_01.mp4" ofType:nil];
-    NSLog(@"%@", fullPath);
-    NSLog(@"%@", path);
-    NSURL *url1 = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
-    
     NSURL *url = [NSURL fileURLWithPath:fullPath];
     NSLog(@"%@", url);
     
@@ -51,6 +46,7 @@
 //    PXMainSplitViewController *split = (PXMainSplitViewController *)[self parentViewController];
 //    [split showViewController:self.playerVC sender:nil];
 //    [self.playerVC.player play];
+    
 }
 
 @end

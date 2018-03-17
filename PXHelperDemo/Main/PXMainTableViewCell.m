@@ -43,7 +43,7 @@
 }
 
 -(void)setup: (YYDownloadModel *)model {
-    
+    _progressLabel.text = [NSString stringWithFormat:@"%f", model.progress];
 }
 
 @end
