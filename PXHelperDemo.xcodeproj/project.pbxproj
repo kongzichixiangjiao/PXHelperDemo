@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01CA435438A4E211D1EC8C26 /* libPods-PXHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */; };
-		DC226FC0205A707E0046BA08 /* YYDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FBF205A707E0046BA08 /* YYDownloadModel.m */; };
-		DC4D668F2058CCF300C3C257 /* YYDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */; };
 		DC4D66932058FFD800C3C257 /* PXMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4D66912058FFD800C3C257 /* PXMainTableViewCell.m */; };
 		DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */; };
 		DC638AAD2057B21300846CEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AAC2057B21300846CEF /* AppDelegate.m */; };
@@ -26,6 +24,11 @@
 		DC638AF82057B37E00846CEF /* PXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638AF42057B37E00846CEF /* PXNavigationViewController.m */; };
 		DC638B032057B7E400846CEF /* AppDelegate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B022057B7E400846CEF /* AppDelegate+Category.m */; };
 		DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC638B0A2057BA4100846CEF /* PXDBModel.m */; };
+		DC94083A205FABF400F898EC /* AppDelegate+DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC940834205FABF400F898EC /* AppDelegate+DownloadManager.m */; };
+		DC94083B205FABF400F898EC /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC940835205FABF400F898EC /* minion_01.mp4 */; };
+		DC94083C205FABF400F898EC /* YYDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC940837205FABF400F898EC /* YYDownloadManager.m */; };
+		DC94083D205FABF400F898EC /* YYDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC940839205FABF400F898EC /* YYDownloadModel.m */; };
+		DC940840205FB05F00F898EC /* UIDevice+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC94083F205FB05F00F898EC /* UIDevice+Category.m */; };
 		DCFF0CE9205B5AFD00A60796 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */; };
 		DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DCFF0CEA205B619F00A60796 /* minion_01.mp4 */; };
 		DCFF0CEE205B63D400A60796 /* PXPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */; };
@@ -53,10 +56,6 @@
 		46544029889E7E3089C90FB0 /* Pods-PXHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		56D3319AE4A8392FC1404F23 /* libPods-PXHelperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXHelperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62705108B9114CA85A66DF05 /* Pods-PXHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXHelperDemo/Pods-PXHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		DC226FBE205A707E0046BA08 /* YYDownloadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDownloadModel.h; sourceTree = "<group>"; };
-		DC226FBF205A707E0046BA08 /* YYDownloadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDownloadModel.m; sourceTree = "<group>"; };
-		DC4D668D2058CCF300C3C257 /* YYDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDownloadManager.h; sourceTree = "<group>"; };
-		DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDownloadManager.m; sourceTree = "<group>"; };
 		DC4D66902058FFD800C3C257 /* PXMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXMainTableViewCell.h; sourceTree = "<group>"; };
 		DC4D66912058FFD800C3C257 /* PXMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXMainTableViewCell.m; sourceTree = "<group>"; };
 		DC4D66922058FFD800C3C257 /* PXMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXMainTableViewCell.xib; sourceTree = "<group>"; };
@@ -89,6 +88,15 @@
 		DC638B082057B8AC00846CEF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DC638B092057BA4100846CEF /* PXDBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXDBModel.h; sourceTree = "<group>"; };
 		DC638B0A2057BA4100846CEF /* PXDBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXDBModel.m; sourceTree = "<group>"; };
+		DC940833205FABF400F898EC /* AppDelegate+DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownloadManager.h"; sourceTree = "<group>"; };
+		DC940834205FABF400F898EC /* AppDelegate+DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DownloadManager.m"; sourceTree = "<group>"; };
+		DC940835205FABF400F898EC /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
+		DC940836205FABF400F898EC /* YYDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDownloadManager.h; sourceTree = "<group>"; };
+		DC940837205FABF400F898EC /* YYDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDownloadManager.m; sourceTree = "<group>"; };
+		DC940838205FABF400F898EC /* YYDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDownloadModel.h; sourceTree = "<group>"; };
+		DC940839205FABF400F898EC /* YYDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDownloadModel.m; sourceTree = "<group>"; };
+		DC94083E205FB05F00F898EC /* UIDevice+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Category.h"; sourceTree = "<group>"; };
+		DC94083F205FB05F00F898EC /* UIDevice+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Category.m"; sourceTree = "<group>"; };
 		DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DCFF0CEA205B619F00A60796 /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
 		DCFF0CEC205B63D400A60796 /* PXPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXPlayerViewController.h; sourceTree = "<group>"; };
@@ -175,6 +183,8 @@
 				DC638AAC2057B21300846CEF /* AppDelegate.m */,
 				DC638B012057B7E400846CEF /* AppDelegate+Category.h */,
 				DC638B022057B7E400846CEF /* AppDelegate+Category.m */,
+				DC94083E205FB05F00F898EC /* UIDevice+Category.h */,
+				DC94083F205FB05F00F898EC /* UIDevice+Category.m */,
 				DC638B092057BA4100846CEF /* PXDBModel.h */,
 				DC638B0A2057BA4100846CEF /* PXDBModel.m */,
 				DC638AE32057B32300846CEF /* PXHomeViewController.h */,
@@ -230,12 +240,23 @@
 		DC638B042057B87500846CEF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				DC4D668D2058CCF300C3C257 /* YYDownloadManager.h */,
-				DC4D668E2058CCF300C3C257 /* YYDownloadManager.m */,
-				DC226FBE205A707E0046BA08 /* YYDownloadModel.h */,
-				DC226FBF205A707E0046BA08 /* YYDownloadModel.m */,
+				DC940832205FABF400F898EC /* YYDownloadManager */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		DC940832205FABF400F898EC /* YYDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				DC940833205FABF400F898EC /* AppDelegate+DownloadManager.h */,
+				DC940834205FABF400F898EC /* AppDelegate+DownloadManager.m */,
+				DC940835205FABF400F898EC /* minion_01.mp4 */,
+				DC940836205FABF400F898EC /* YYDownloadManager.h */,
+				DC940837205FABF400F898EC /* YYDownloadManager.m */,
+				DC940838205FABF400F898EC /* YYDownloadModel.h */,
+				DC940839205FABF400F898EC /* YYDownloadModel.m */,
+			);
+			path = YYDownloadManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +370,7 @@
 			files = (
 				DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */,
 				DC638AB82057B21300846CEF /* LaunchScreen.storyboard in Resources */,
+				DC94083B205FABF400F898EC /* minion_01.mp4 in Resources */,
 				DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */,
 				DC638AB52057B21300846CEF /* Assets.xcassets in Resources */,
 				DC638AB32057B21300846CEF /* Main.storyboard in Resources */,
@@ -434,14 +456,16 @@
 			files = (
 				DC638ABB2057B21300846CEF /* main.m in Sources */,
 				DC638AE52057B32300846CEF /* PXHomeViewController.m in Sources */,
+				DC94083A205FABF400F898EC /* AppDelegate+DownloadManager.m in Sources */,
 				DC4D66932058FFD800C3C257 /* PXMainTableViewCell.m in Sources */,
 				DCFF0CEE205B63D400A60796 /* PXPlayerViewController.m in Sources */,
-				DC226FC0205A707E0046BA08 /* YYDownloadModel.m in Sources */,
-				DC4D668F2058CCF300C3C257 /* YYDownloadManager.m in Sources */,
 				DC638B0B2057BA4100846CEF /* PXDBModel.m in Sources */,
+				DC94083C205FABF400F898EC /* YYDownloadManager.m in Sources */,
 				DC638AF62057B37E00846CEF /* PXMainTableViewController.m in Sources */,
 				DC638AF52057B37E00846CEF /* PXMainSplitViewController.m in Sources */,
+				DC94083D205FABF400F898EC /* YYDownloadModel.m in Sources */,
 				DC638AF82057B37E00846CEF /* PXNavigationViewController.m in Sources */,
+				DC940840205FB05F00F898EC /* UIDevice+Category.m in Sources */,
 				DC638AAD2057B21300846CEF /* AppDelegate.m in Sources */,
 				DC638B032057B7E400846CEF /* AppDelegate+Category.m in Sources */,
 				DC638AF72057B37E00846CEF /* PXMainViewController.m in Sources */,

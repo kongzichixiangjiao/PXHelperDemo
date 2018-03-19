@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Category.h"
-
+#import "AppDelegate+DownloadManager.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [self configDownManager];
     [self loginFMDB];
     
     return YES;

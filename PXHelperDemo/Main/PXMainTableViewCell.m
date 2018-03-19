@@ -27,6 +27,7 @@
 
 
 - (IBAction)start:(UIButton *)sender {
+    
 }
 
 
@@ -36,10 +37,11 @@
 }
 
 - (IBAction)stop:(UIButton *)sender {
+    [YYDownloadManagerShared stopWithModel:_model];
 }
 
 - (IBAction)goon:(UIButton *)sender {
-    
+    [YYDownloadManagerShared startLoadDataWithModel:_model];
 }
 
 -(void)setup: (YYDownloadModel *)model {

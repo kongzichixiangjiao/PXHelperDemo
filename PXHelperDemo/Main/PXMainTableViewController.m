@@ -9,36 +9,68 @@
 #import "PXMainTableViewController.h"
 #import "YYDownloadManager.h"
 #import "PXMainTableViewCell.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "UIDevice+Category.h"
 
 @interface PXMainTableViewController () <YYDownloadManagerDelegat>
 @property(nonatomic, strong)dispatch_queue_t concurrentQueue;
 @property(nonatomic, strong)NSOperationQueue *queue;
-@property(nonatomic, strong)NSMutableArray *dataSource;
+@property (nonatomic, strong)NSMutableArray *dataArray;
+
+
+@property (nonatomic, strong) AVPlayer *player; /**< 媒体播放器 */
+@property (nonatomic, strong) AVPlayerViewController *playerVC; /**< 媒体播放控制器 */
 @end
 
 @implementation PXMainTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //
-    self.dataSource = [NSMutableArray array];
+
+    self.queue = [[NSOperationQueue alloc] init];
+    
+    NSMutableArray *arr = [NSMutableArray array];
+    arr = [YYDownloadModel searchAll];
+    
+    self.dataArray = [NSMutableArray array];
     for (int i = 1; i<5; i++) {
         YYDownloadModel *model = [[YYDownloadModel alloc] init];
         model.fileName = [NSString stringWithFormat:@"minion_0%d.mp4", i];
-        model.downloadUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4", i];;
+        model.downloadUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4", i];
         model.taskDescription = [NSString stringWithFormat:@"minion_0%d.mp4", i];
-        [self.dataSource addObject:model];
+        [self.dataArray addObject:model];
 //        [YYDownloadModel saveItem:model];
     }
     
-//    [YYDownloadManagerShared downloadDataWithModel:model];
+    for (int i = 0; i<self.dataArray.count; i++) {
+        YYDownloadModel *model = self.dataArray[i];
+        BOOL isSame = NO;
+        int count = 0;
+        for (int j = 0; j<arr.count; j++) {
+            YYDownloadModel *item = arr[j];
+            if (item.state == YYDownloadStateIng) {
+                item.state = YYDownloadStatePause;
+            }
+            if ([model.taskDescription isEqualToString:item.taskDescription]) {
+                isSame = YES;
+                count = j;
+                break;
+            }
+        }
+        if (arr.count > 0) {
+            if (isSame) {
+                [self.dataArray setObject:arr[count] atIndexedSubscript:i];
+            } else {
+                [self.dataArray addObject:arr[count]];
+                [YYDownloadModel saveItem:arr[count]];
+            }
+        }
+    }
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PXMainTableViewCell" bundle:nil] forCellReuseIdentifier:@"PXMainTableViewCell"];
     
-    //创建并发队列，传入参数为DISPATCH_QUEUE_CONCURRENT
-    self.concurrentQueue = dispatch_queue_create("com.hjn.concurrent", DISPATCH_QUEUE_CONCURRENT);
-    self.queue = [[NSOperationQueue alloc] init];
-    self.queue.maxConcurrentOperationCount = 2;
+    [UIDevice yy_deviceSize];
 
 }
 
@@ -52,13 +84,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return self.dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PXMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PXMainTableViewCell" forIndexPath:indexPath];
-    YYDownloadModel *model = self.dataSource[indexPath.row];
+    YYDownloadModel *model = self.dataArray[indexPath.row];
     model.row = indexPath.row;
     cell.model = model;
     return cell;
@@ -69,33 +101,38 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    dispatch_async(self.concurrentQueue, ^{
-//    });
-    
+
+    YYDownloadModel *model = self.dataArray[indexPath.row];
+    if (model.state == YYDownloadStateFinished) {
+        NSString* fullPath =
+        [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+         stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@", kYYDownloadVideoFile, model.fileName]];
+        NSURL *url = [NSURL fileURLWithPath:fullPath];
+        //        NSString *path = [[NSBundle mainBundle] pathForResource:@"minion_01" ofType:@"mp4"];
+        //        NSURL *url1 = [NSURL fileURLWithPath:path];
+        self.player = [[AVPlayer alloc] initWithURL:url];
+        self.playerVC = [[AVPlayerViewController alloc] init];
+        
+        [self presentViewController:self.playerVC animated:true completion:^{
+            self.playerVC.player = self.player;
+        }];
+        return;
+    } else if (model.state == YYDownloadStatePause) {
+        [YYDownloadManagerShared startLoadDataWithModel:model];
+        YYDownloadManagerShared.delegate = self;
+        return;
+    } else if (model.state == YYDownloadStateIng) {
+        [YYDownloadManagerShared stopWithModel:model];
+        YYDownloadManagerShared.delegate = self;
+        return;
+    }
     NSBlockOperation *op = [[NSBlockOperation alloc] init];
     [op addExecutionBlock:^{
-        [YYDownloadManagerShared startLoadDataWithModel:self.dataSource[indexPath.row]];
+        [YYDownloadManagerShared startLoadDataWithModel:model];
         YYDownloadManagerShared.delegate = self;
     }];
     [self.queue addOperation:op];
 
-}
-
-- (void)completeWithTask:(NSURLSessionTask *)task andIsSuccess:(BOOL)isSuccess {
-    
-}
-
-- (void)completeWithProgress: (CGFloat)progress {
-    
-}
-
-- (void)downloadWithFilePath: (NSString *)filePath {
-    
-}
-
-- (void)downloadWithResumeData: (NSData *)data {
-    
 }
 
 - (void)downloadingWithModel: (YYDownloadModel *)model {
@@ -106,9 +143,21 @@
     }
 }
 
+- (void)downloadFinishedWithModel:(YYDownloadModel *)model {
+    [YYDownloadModel updateItem:model];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
+
+
+
+
+
 
 @end
