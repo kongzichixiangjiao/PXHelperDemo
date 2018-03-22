@@ -26,7 +26,9 @@ typedef enum : NSUInteger {
 @property(nonatomic, strong)NSString *fileName;
 @property(nonatomic, strong)NSString *filePath;
 @property(nonatomic, strong)NSString *downloadUrl;
+@property(nonatomic, strong)NSString *videoMessage;
 @property(nonatomic, strong)NSString *iD;
+@property(nonatomic, strong)NSString *bgImageUrl;
 @property(nonatomic, assign)NSInteger totalLength;
 @property(nonatomic, assign)NSInteger downloadEdLength;
 @property(nonatomic, assign)float progress;

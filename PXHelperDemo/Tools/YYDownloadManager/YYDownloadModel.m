@@ -15,6 +15,19 @@
 
 @implementation YYDownloadModel
 
+
++(NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"iD":@"id", @"fileName":@"title", @"bgImageUrl":@"coverImagesPath", @"downloadUrl":@"videoPath", @"introduction":@"introduction", @"videoMessage":@"conferenceTime"};
+}
+
+- (NSString *)fileName {
+    NSArray *arr = [_fileName componentsSeparatedByString:@"."];
+    if ([[arr lastObject] isEqualToString:@"mp4"]) {
+        return _fileName;
+    }
+    return [NSString stringWithFormat:@"%@.mp4", _fileName];
+}
+
 - (instancetype)initWithURLString:(NSString *)URLString
 {
     return [self initWithURLString:URLString filePath:nil];
@@ -29,14 +42,6 @@
     }
     return self;
 }
-
-
-
-
-
-
-
-
 
 +(BOOL)saveItem:(YYDownloadModel *)model {
     return [model saveToDB];

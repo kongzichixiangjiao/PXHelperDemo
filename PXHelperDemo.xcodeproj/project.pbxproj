@@ -30,7 +30,6 @@
 		DC94083D205FABF400F898EC /* YYDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC940839205FABF400F898EC /* YYDownloadModel.m */; };
 		DC940840205FB05F00F898EC /* UIDevice+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DC94083F205FB05F00F898EC /* UIDevice+Category.m */; };
 		DCFF0CE9205B5AFD00A60796 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */; };
-		DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DCFF0CEA205B619F00A60796 /* minion_01.mp4 */; };
 		DCFF0CEE205B63D400A60796 /* PXPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */; };
 		DCFF0D35205B690500A60796 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFF0D34205B690500A60796 /* AVKit.framework */; };
 /* End PBXBuildFile section */
@@ -98,7 +97,6 @@
 		DC94083E205FB05F00F898EC /* UIDevice+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Category.h"; sourceTree = "<group>"; };
 		DC94083F205FB05F00F898EC /* UIDevice+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Category.m"; sourceTree = "<group>"; };
 		DCFF0CE8205B5AFD00A60796 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DCFF0CEA205B619F00A60796 /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
 		DCFF0CEC205B63D400A60796 /* PXPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXPlayerViewController.h; sourceTree = "<group>"; };
 		DCFF0CED205B63D400A60796 /* PXPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXPlayerViewController.m; sourceTree = "<group>"; };
 		DCFF0D34205B690500A60796 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -176,7 +174,6 @@
 		DC638AAA2057B21300846CEF /* PXHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DCFF0CEA205B619F00A60796 /* minion_01.mp4 */,
 				DC638B042057B87500846CEF /* Tools */,
 				DC638AEC2057B37E00846CEF /* Main */,
 				DC638AAB2057B21300846CEF /* AppDelegate.h */,
@@ -371,7 +368,6 @@
 				DC4D66942058FFD800C3C257 /* PXMainTableViewCell.xib in Resources */,
 				DC638AB82057B21300846CEF /* LaunchScreen.storyboard in Resources */,
 				DC94083B205FABF400F898EC /* minion_01.mp4 in Resources */,
-				DCFF0CEB205B619F00A60796 /* minion_01.mp4 in Resources */,
 				DC638AB52057B21300846CEF /* Assets.xcassets in Resources */,
 				DC638AB32057B21300846CEF /* Main.storyboard in Resources */,
 			);
