@@ -74,6 +74,72 @@
 
 }
 
+/*
+ - (void)requestData {
+ 
+ for (YYDownloadModel* model in self.dataArray) {
+ if (model.state == YYDownloadStateIng) {
+ [self.collectionView.mj_header endRefreshing];
+ [self.collectionView.mj_footer endRefreshing];
+ return;
+ }
+ }
+ 
+ NSDictionary *dic =@{@"startPage" : @(self.page), @"pageSize" : @10, @"videoType" : @"2"};
+ [PXHttpRequestTool POST:PXHttpPXVideo parameters:dic success:^(id responseObject) {
+ id result = responseObject[@"result"];
+ NSDictionary *dic = result[@"data"];
+ NSArray *models = [YYDownloadModel mj_objectArrayWithKeyValuesArray:dic];
+ 
+ for (YYDownloadModel *model in models) {
+ model.taskDescription = model.iD;
+ }
+ 
+ if (self.page != 1) {
+ [self.dataArray addObjectsFromArray:models];
+ } else {
+ [self.dataArray setArray:models];
+ }
+ 
+ NSMutableArray *arr = [NSMutableArray array];
+ arr = [YYDownloadModel searchAll];
+ 
+ for (int i = 0; i<self.dataArray.count; i++) {
+ YYDownloadModel *model = self.dataArray[i];
+ BOOL isSame = NO;
+ int count = 0;
+ for (int j = 0; j<arr.count; j++) {
+ YYDownloadModel *item = arr[j];
+ if (item.state == YYDownloadStateIng) {
+ item.state = YYDownloadStatePause;
+ }
+ if ([model.taskDescription isEqualToString:item.taskDescription]) {
+ isSame = YES;
+ count = j;
+ break;
+ }
+ }
+ if (arr.count > 0) {
+ if (isSame) {
+ [self.dataArray setObject:arr[count] atIndexedSubscript:i];
+ } else {
+ [self.dataArray addObject:arr[count]];
+ [YYDownloadModel saveItem:arr[count]];
+ }
+ } else {
+ [YYDownloadModel saveItem:model];
+ }
+ }
+ 
+ [self.collectionView reloadData];
+ [self.collectionView.mj_footer endRefreshing];
+ [self.collectionView.mj_header endRefreshing];
+ } failure:^(NSError *error) {
+ [self.collectionView.mj_footer endRefreshing];
+ [self.collectionView.mj_header endRefreshing];
+ }];
+ }
+ */
 
 
 - (void)didReceiveMemoryWarning {
